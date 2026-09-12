@@ -137,7 +137,7 @@
     <!-- Main Download Card -->
     <div class="bg-card rounded-2xl p-6 sm:p-8 space-y-6 subtle-glow">
       
-      <!-- Specifications Grid (Incluye contadores en tiempo real) -->
+      <!-- Specifications Grid (Incluye contadores en tiempo real con anti-spam) -->
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
         <div class="bg-black/60 rounded-xl p-3 text-center border border-zinc-900">
           <span class="block text-[10px] text-zinc-500 uppercase tracking-wider font-semibold">Versión</span>
@@ -160,7 +160,7 @@
           <span id="stat-downloads" class="font-mono font-bold text-sm text-emerald-400">...</span>
         </div>
         <div class="bg-black/60 rounded-xl p-3 text-center border border-zinc-900">
-          <span class="block text-[10px] text-zinc-500 uppercase tracking-wider font-semibold">Visitas Web</span>
+          <span class="block text-[10px] text-zinc-500 uppercase tracking-wider font-semibold">Visitas Únicas</span>
           <span id="stat-visits" class="font-mono font-bold text-sm text-cyan-400">...</span>
         </div>
       </div>
@@ -413,7 +413,7 @@
     // API URL prefix (supports both onrender origin and relative paths)
     const API_BASE = window.location.origin.includes('github.io') ? 'https://xkeyapi.onrender.com' : '';
 
-    // Real-Time Analytics & Stats
+    // Real-Time Analytics & Stats (With Anti-Refresh Security)
     function loadStats() {
       fetch(`${API_BASE}/api/analytics/stats`)
         .then(res => res.json())
@@ -429,6 +429,17 @@
     }
 
     function trackVisit() {
+      // Client-Side Cooldown Security: Check if already tracked in this browser session (15 min cooldown)
+      const lastVisit = localStorage.getItem('ragex_last_visit_time');
+      const now = Date.now();
+      const fifteenMinutes = 15 * 60 * 1000;
+
+      if (lastVisit && (now - parseInt(lastVisit)) < fifteenMinutes) {
+        // Only load live numbers without submitting a duplicate increment
+        loadStats();
+        return;
+      }
+
       fetch(`${API_BASE}/api/analytics/visit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -436,6 +447,7 @@
       })
       .then(res => res.json())
       .then(data => {
+        localStorage.setItem('ragex_last_visit_time', now.toString());
         if (data.success && data.totalVisits) {
           const elVisits = document.getElementById('stat-visits');
           if (elVisits) elVisits.textContent = Number(data.totalVisits).toLocaleString();
@@ -447,7 +459,12 @@
       });
     }
 
+    let downloadDebounce = false;
     function trackDownload() {
+      if (downloadDebounce) return;
+      downloadDebounce = true;
+      setTimeout(() => { downloadDebounce = false; }, 4000);
+
       fetch(`${API_BASE}/api/analytics/download`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
