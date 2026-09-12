@@ -527,8 +527,10 @@
       }, 3500);
     }
 
-    // API URL prefix (supports both onrender origin and relative paths)
-    const API_BASE = window.location.origin.includes('github.io') ? 'https://xkeyapi.onrender.com' : '';
+        // API URL prefix (points to live Render API when hosted on GitHub Pages or external domains)
+    const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.origin.includes('onrender.com'))
+      ? ''
+      : 'https://xkeyapi.onrender.com';
 
     // Real-Time Analytics & Stats (With Anti-Refresh Security)
     function loadStats() {
@@ -545,18 +547,7 @@
         .catch(() => {});
     }
 
-    function trackVisit() {
-      // Client-Side Cooldown Security: Check if already tracked in this browser session (15 min cooldown)
-      const lastVisit = localStorage.getItem('ragex_last_visit_time');
-      const now = Date.now();
-      const fifteenMinutes = 15 * 60 * 1000;
-
-      if (lastVisit && (now - parseInt(lastVisit)) < fifteenMinutes) {
-        // Only load live numbers without submitting a duplicate increment
-        loadStats();
-        return;
-      }
-
+        function trackVisit() {
       fetch(`${API_BASE}/api/analytics/visit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -564,8 +555,7 @@
       })
       .then(res => res.json())
       .then(data => {
-        localStorage.setItem('ragex_last_visit_time', now.toString());
-        if (data.success && data.totalVisits) {
+        if (data.success && data.totalVisits !== undefined) {
           const elVisits = document.getElementById('stat-visits');
           if (elVisits) elVisits.textContent = Number(data.totalVisits).toLocaleString();
         }
