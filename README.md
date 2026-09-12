@@ -9,7 +9,7 @@
 [![Version](https://img.shields.io/badge/Versión-2.0.0--Beta-cyan?style=flat-square)](https://github.com/bnxyung7/X)
 [![Build](https://img.shields.io/badge/Build-10-purple?style=flat-square)](https://github.com/bnxyung7/X)
 [![Size](https://img.shields.io/badge/Tamaño-8.9_MB-blue?style=flat-square)](https://github.com/bnxyung7/X/raw/main/X-82949194-BETA.ipa)
-[![Platform](https://img.shields.io/badge/iOS-15.0_--_18.x-emerald?style=flat-square)](https://github.com/bnxyung7/X)
+[![Platform](https://img.shields.io/badge/iOS-15_hasta_27-emerald?style=flat-square)](https://github.com/bnxyung7/X)
 [![Status](https://img.shields.io/badge/Estado-Activo_%2F_En_Línea-brightgreen?style=flat-square)](https://github.com/bnxyung7/X)
 
 <p align="center">
