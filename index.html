@@ -3,273 +3,261 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RageX iOS Beta — Descarga Directa Oficial</title>
-  <meta name="description" content="Descarga directa oficial de la IPA RageX iOS v2.0.0-Beta. Instalación rápida, soporte oficial, canal de WhatsApp y comunidad de Discord." />
-  
-  <!-- Open Graph / Meta -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="RageX iOS Beta — Descarga Oficial" />
-  <meta property="og:description" content="Descarga directa de la IPA oficial v2.0.0-Beta. Rápido, seguro y sin publicidad." />
-  <meta name="theme-color" content="#07090e" />
+  <title>Project X iOS — Distribución Oficial</title>
+  <meta name="description" content="Portal oficial de distribución directa de Project X para iOS. Descarga directa de la versión oficial v2.0.0-Beta." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/jpeg" href="./assets/logo.jpg" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     * {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       box-sizing: border-box;
     }
     .font-mono {
       font-family: 'JetBrains Mono', monospace;
     }
     body {
-      background-color: #07090e;
-      color: #f1f5f9;
+      background-color: #000000;
+      color: #ededed;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
-    .glass-panel {
-      background: rgba(15, 23, 42, 0.65);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+    .bg-obsidian {
+      background-color: #09090b;
+    }
+    .bg-card {
+      background-color: #0d0d10;
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .glass-card {
-      background: rgba(17, 24, 39, 0.55);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+    .bg-card:hover {
+      border-color: rgba(255, 255, 255, 0.16);
     }
-    .glow-cyan {
-      box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.35);
+    .subtle-glow {
+      box-shadow: 0 0 50px -10px rgba(255, 255, 255, 0.05);
     }
-    .glow-purple {
-      box-shadow: 0 0 35px -5px rgba(168, 85, 247, 0.35);
+    .btn-primary {
+      background: #ffffff;
+      color: #000000;
+      transition: all 0.2s ease;
     }
-    .glow-emerald {
-      box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.3);
+    .btn-primary:hover {
+      background: #e4e4e7;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
     }
-    .gradient-text-cyan {
-      background: linear-gradient(135deg, #38bdf8 0%, #06b6d4 50%, #818cf8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .btn-secondary {
+      background: #18181b;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #ededed;
+      transition: all 0.2s ease;
     }
-    .gradient-text-purple {
-      background: linear-gradient(135deg, #c084fc 0%, #a855f7 50%, #ec4899 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .btn-secondary:hover {
+      background: #27272a;
+      border-color: rgba(255, 255, 255, 0.2);
     }
-    @keyframes pulseGlow {
-      0%, 100% { transform: scale(1); opacity: 0.8; }
-      50% { transform: scale(1.05); opacity: 1; }
+    .animate-fade-in {
+      animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
-    .animate-pulse-slow {
-      animation: pulseGlow 4s ease-in-out infinite;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-cyan-500/30 selection:text-cyan-200">
-
-  <!-- Background Ambient Glows -->
-  <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
-    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-cyan-500/10 rounded-full blur-[120px] animate-pulse-slow"></div>
-    <div class="absolute top-1/3 -left-40 w-[450px] h-[450px] bg-purple-600/10 rounded-full blur-[130px]"></div>
-    <div class="absolute bottom-10 -right-40 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[140px]"></div>
-  </div>
+<body class="min-h-screen flex flex-col justify-between selection:bg-white selection:text-black">
 
   <!-- Header -->
-  <header class="relative z-10 w-full border-b border-white/[0.06] bg-[#07090e]/80 backdrop-blur-md">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 flex items-center justify-center font-black text-black text-xl shadow-lg shadow-cyan-500/20">
-          ⚡
+  <header class="w-full border-b border-zinc-900 bg-black/80 backdrop-blur-md sticky top-0 z-30">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="./" class="flex items-center gap-3">
+        <img src="./assets/logo.jpg" alt="Project X" class="w-8 h-8 rounded-lg object-contain border border-zinc-800" />
+        <div class="flex items-center gap-2">
+          <span class="font-bold text-sm tracking-tight text-white">PROJECT X</span>
+          <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-zinc-900 text-zinc-400 border border-zinc-800">iOS</span>
         </div>
-        <div>
-          <h1 class="text-base font-extrabold tracking-tight text-white flex items-center gap-2">
-            RageX <span class="text-xs px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 font-mono border border-cyan-500/30">iOS BETA</span>
-          </h1>
-          <p class="text-[11px] text-slate-400">Portal Oficial de Descarga Directa</p>
-        </div>
-      </div>
+      </a>
 
+      <!-- Nav Links -->
       <div class="flex items-center gap-2 sm:gap-3">
-        <a href="https://whatsapp.com/channel/0029Vb7NRaRAojYuOAfX5S0S" target="_blank" rel="noopener" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 hover:bg-emerald-500/20 transition">
-          <span>📢</span>
-          <span>Canal WhatsApp</span>
+        <a href="https://whatsapp.com/channel/0029Vb7NRaRAojYuOAfX5S0S" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-medium text-zinc-300 hover:text-white bg-zinc-900/80 hover:bg-zinc-850 border border-zinc-800 transition">
+          <svg class="w-3.5 h-3.5 text-zinc-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.274.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+          <span>Canal Oficial</span>
         </a>
-        <a href="https://discord.gg/AksKwSWaKq" target="_blank" rel="noopener" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-indigo-300 bg-indigo-500/10 border border-indigo-500/20 hover:bg-indigo-500/20 transition">
-          <span>🎮</span>
+
+        <a href="https://discord.gg/AksKwSWaKq" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-medium text-zinc-300 hover:text-white bg-zinc-900/80 hover:bg-zinc-850 border border-zinc-800 transition">
+          <svg class="w-3.5 h-3.5 text-zinc-400" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
           <span>Discord</span>
         </a>
       </div>
+
     </div>
   </header>
 
-  <!-- Main Hero Content -->
-  <main class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16 space-y-10 flex-1">
+  <!-- Main Hero Section -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16 space-y-12 flex-1">
     
-    <!-- Hero Box -->
+    <!-- Hero Header -->
     <div class="text-center space-y-4">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.1] text-xs font-mono text-cyan-300">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-        <span>VERSIÓN 2.0.0-BETA DISPONIBLE</span>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-[11px] font-mono text-zinc-400">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+        <span>VERSIÓN 2.0.0-BETA &bull; OFICIAL</span>
       </div>
 
-      <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white">
-        Descarga Oficial <span class="gradient-text-cyan">RageX IPA</span>
-      </h2>
-      <p class="text-sm sm:text-base text-slate-400 max-w-xl mx-auto leading-relaxed">
-        Descarga directa, limpia y libre de publicidad para tu iPhone o iPad. Compatible con los principales métodos de firma en iOS.
+      <div class="flex items-center justify-center gap-3 pt-2">
+        <img src="./assets/logo.jpg" alt="Logo" class="w-12 h-12 rounded-xl object-contain border border-zinc-800 shadow-xl" />
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
+          PROJECT X
+        </h1>
+      </div>
+
+      <p class="text-sm sm:text-base text-zinc-400 max-w-lg mx-auto leading-relaxed">
+        Distribución oficial para iOS. Arquitectura optimizada para máxima estabilidad, seguridad y compatibilidad.
       </p>
     </div>
 
     <!-- Main Download Card -->
-    <div class="glass-panel rounded-3xl p-6 sm:p-8 space-y-6 glow-cyan">
+    <div class="bg-card rounded-2xl p-6 sm:p-8 space-y-6 subtle-glow">
       
-      <!-- App Meta Grid -->
+      <!-- Specifications Grid -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        <div class="glass-card rounded-xl p-3 text-center border border-white/[0.06]">
-          <span class="block text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Versión</span>
-          <span class="font-mono font-bold text-sm text-cyan-300">v2.0.0-Beta</span>
+        <div class="bg-black/60 rounded-xl p-3 text-center border border-zinc-900">
+          <span class="block text-[10px] text-zinc-500 uppercase tracking-wider font-semibold">Versión</span>
+          <span class="font-mono font-bold text-sm text-white">2.0.0-Beta</span>
         </div>
-        <div class="glass-card rounded-xl p-3 text-center border border-white/[0.06]">
-          <span class="block text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Build</span>
-          <span class="font-mono font-bold text-sm text-purple-300">10 (Release)</span>
+        <div class="bg-black/60 rounded-xl p-3 text-center border border-zinc-900">
+          <span class="block text-[10px] text-zinc-500 uppercase tracking-wider font-semibold">Build</span>
+          <span class="font-mono font-bold text-sm text-zinc-300">10</span>
         </div>
-        <div class="glass-card rounded-xl p-3 text-center border border-white/[0.06]">
-          <span class="block text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Tamaño</span>
+        <div class="bg-black/60 rounded-xl p-3 text-center border border-zinc-900">
+          <span class="block text-[10px] text-zinc-500 uppercase tracking-wider font-semibold">Tamaño</span>
           <span class="font-mono font-bold text-sm text-white">8.9 MB</span>
         </div>
-        <div class="glass-card rounded-xl p-3 text-center border border-white/[0.06]">
-          <span class="block text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Compatibilidad</span>
-          <span class="font-mono font-bold text-sm text-emerald-400">iOS 15.0 - 18.x</span>
+        <div class="bg-black/60 rounded-xl p-3 text-center border border-zinc-900">
+          <span class="block text-[10px] text-zinc-500 uppercase tracking-wider font-semibold">S.O. Compatible</span>
+          <span class="font-mono font-bold text-sm text-zinc-300">iOS 15.0 – 18.x</span>
         </div>
       </div>
 
-      <!-- Action Buttons -->
+      <!-- Download Action Buttons -->
       <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
-        <a id="btn-download" href="./X-82949194-BETA.ipa" download="X-82949194-BETA.ipa" class="w-full sm:flex-1 py-4 px-6 rounded-2xl font-extrabold text-sm sm:text-base text-black bg-gradient-to-r from-cyan-400 via-cyan-300 to-blue-400 hover:from-cyan-300 hover:to-blue-300 shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:shadow-[0_0_40px_rgba(6,182,212,0.6)] transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3">
-          <span class="text-xl">📥</span>
-          <span>DESCARGAR IPA DIRECTA (8.9 MB)</span>
+        <a id="btn-download" href="./X-82949194-BETA.ipa" download="X-82949194-BETA.ipa" class="btn-primary w-full sm:flex-1 py-3.5 px-6 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          <span>Descargar Archivo IPA (8.9 MB)</span>
         </a>
-        <button onclick="copyDirectLink()" class="w-full sm:w-auto py-4 px-5 rounded-2xl font-bold text-xs sm:text-sm text-slate-300 bg-white/[0.06] hover:bg-white/[0.1] border border-white/[0.1] hover:text-white transition flex items-center justify-center gap-2">
-          <span>📋</span>
+        <button onclick="copyDirectLink()" class="btn-secondary w-full sm:w-auto py-3.5 px-5 rounded-xl font-semibold text-xs sm:text-sm flex items-center justify-center gap-2">
+          <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
           <span id="btn-copy-label">Copiar Enlace Directo</span>
         </button>
       </div>
 
-      <!-- Direct URLs Container -->
-      <div class="p-3.5 rounded-xl bg-black/40 border border-white/[0.06] flex items-center justify-between gap-3 text-xs font-mono text-slate-400 overflow-hidden">
-        <span class="text-slate-400 shrink-0 font-sans font-bold">Archivo:</span>
-        <span class="text-cyan-300 truncate select-all">X-82949194-BETA.ipa</span>
-        <span class="text-emerald-400 font-bold shrink-0 font-sans flex items-center gap-1">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Verificado
-        </span>
+      <!-- File Details -->
+      <div class="p-3 rounded-xl bg-black/40 border border-zinc-900 flex items-center justify-between text-xs font-mono text-zinc-400">
+        <span class="text-zinc-500 font-sans">Binario:</span>
+        <span class="text-zinc-300 truncate select-all">X-82949194-BETA.ipa</span>
+        <span class="text-zinc-400 font-sans font-medium">Verificado</span>
       </div>
     </div>
 
-    <!-- Official Channels & Support Grid -->
+    <!-- Official Channels & Support Section -->
     <div class="space-y-4">
-      <h3 class="text-xs font-extrabold uppercase tracking-widest text-slate-400 text-center">
-        CANALES OFICIALES Y ATENCIÓN DIRECTA
+      <h3 class="text-xs font-bold uppercase tracking-widest text-zinc-500 text-center">
+        CANALES OFICIALES & ATENCIÓN
       </h3>
 
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         
         <!-- WhatsApp Canal -->
-        <a href="https://whatsapp.com/channel/0029Vb7NRaRAojYuOAfX5S0S" target="_blank" rel="noopener" class="glass-card rounded-2xl p-5 border border-emerald-500/20 hover:border-emerald-500/40 hover:bg-emerald-500/[0.06] transition-all group flex flex-col justify-between space-y-3">
+        <a href="https://whatsapp.com/channel/0029Vb7NRaRAojYuOAfX5S0S" target="_blank" rel="noopener" class="bg-card rounded-xl p-5 transition group flex flex-col justify-between space-y-4">
           <div class="flex items-center justify-between">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-xl">
-              📢
+            <div class="w-9 h-9 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.274.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
             </div>
-            <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Oficial</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-900 text-zinc-400 border border-zinc-800">Oficial</span>
           </div>
           <div>
-            <h4 class="font-bold text-white text-sm group-hover:text-emerald-300 transition">Canal de WhatsApp</h4>
-            <p class="text-xs text-slate-400 mt-1">Anuncios, actualizaciones en vivo y nuevas versiones.</p>
+            <h4 class="font-bold text-white text-sm">Canal Informativo</h4>
+            <p class="text-xs text-zinc-400 mt-1">Anuncios de actualizaciones y nuevas versiones.</p>
           </div>
-          <span class="text-xs font-bold text-emerald-400 flex items-center gap-1 group-hover:translate-x-1 transition">
-            Unirse al Canal &rarr;
+          <span class="text-xs font-semibold text-zinc-300 group-hover:text-white flex items-center gap-1">
+            Entrar al Canal &rarr;
           </span>
         </a>
 
-        <!-- WhatsApp Support -->
-        <a href="https://wa.me/18099289722?text=Hola%20RageX%20Soporte,%20necesito%20ayuda%20con%20la%20IPA%20Beta" target="_blank" rel="noopener" class="glass-card rounded-2xl p-5 border border-cyan-500/20 hover:border-cyan-500/40 hover:bg-cyan-500/[0.06] transition-all group flex flex-col justify-between space-y-3">
+        <!-- WhatsApp Support (Sin exponer el numero en texto) -->
+        <a href="https://wa.me/18099289722?text=Hola%2C%20solicito%20atenci%C3%B3n%20y%20soporte%20oficial%20de%20Project%20X%20iOS" target="_blank" rel="noopener" class="bg-card rounded-xl p-5 transition group flex flex-col justify-between space-y-4">
           <div class="flex items-center justify-between">
-            <div class="w-10 h-10 rounded-xl bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center text-xl">
-              💬
+            <div class="w-9 h-9 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
             </div>
-            <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">24/7</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-900 text-zinc-400 border border-zinc-800">Directo</span>
           </div>
           <div>
-            <h4 class="font-bold text-white text-sm group-hover:text-cyan-300 transition">Soporte Directo</h4>
-            <p class="text-xs text-slate-400 mt-1">Atención personalizada, activación de keys y dudas.</p>
+            <h4 class="font-bold text-white text-sm">Atención al Cliente</h4>
+            <p class="text-xs text-zinc-400 mt-1">Soporte técnico y activación de membresías.</p>
           </div>
-          <span class="text-xs font-bold text-cyan-400 flex items-center gap-1 group-hover:translate-x-1 transition">
-            +1 (809) 928-9722 &rarr;
+          <span class="text-xs font-semibold text-zinc-300 group-hover:text-white flex items-center gap-1">
+            Contactar por WhatsApp &rarr;
           </span>
         </a>
 
         <!-- Discord Community -->
-        <a href="https://discord.gg/AksKwSWaKq" target="_blank" rel="noopener" class="glass-card rounded-2xl p-5 border border-indigo-500/20 hover:border-indigo-500/40 hover:bg-indigo-500/[0.06] transition-all group flex flex-col justify-between space-y-3">
+        <a href="https://discord.gg/AksKwSWaKq" target="_blank" rel="noopener" class="bg-card rounded-xl p-5 transition group flex flex-col justify-between space-y-4">
           <div class="flex items-center justify-between">
-            <div class="w-10 h-10 rounded-xl bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center text-xl">
-              🎮
+            <div class="w-9 h-9 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
             </div>
-            <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">Comunidad</span>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-900 text-zinc-400 border border-zinc-800">Comunidad</span>
           </div>
           <div>
-            <h4 class="font-bold text-white text-sm group-hover:text-indigo-300 transition">Servidor Discord</h4>
-            <p class="text-xs text-slate-400 mt-1">Comunidad activa, tickets de soporte y sorteos.</p>
+            <h4 class="font-bold text-white text-sm">Servidor Discord</h4>
+            <p class="text-xs text-zinc-400 mt-1">Comunidad oficial, guías y asistencia.</p>
           </div>
-          <span class="text-xs font-bold text-indigo-400 flex items-center gap-1 group-hover:translate-x-1 transition">
-            Entrar a Discord &rarr;
+          <span class="text-xs font-semibold text-zinc-300 group-hover:text-white flex items-center gap-1">
+            Unirse a Discord &rarr;
           </span>
         </a>
 
       </div>
     </div>
 
-    <!-- Quick Installation Guide -->
-    <div class="glass-card rounded-3xl p-6 sm:p-7 space-y-5 border border-white/[0.08]">
-      <div class="flex items-center gap-2.5">
-        <span class="text-lg">📲</span>
-        <h3 class="text-sm sm:text-base font-bold text-white">¿Cómo instalar la IPA en tu iPhone / iPad?</h3>
-      </div>
+    <!-- Installation Methods -->
+    <div class="bg-card rounded-2xl p-6 sm:p-7 space-y-5">
+      <h3 class="text-sm font-bold text-white flex items-center gap-2">
+        <span>Guía de Instalación en iOS</span>
+      </h3>
 
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         
-        <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05] space-y-2">
-          <div class="flex items-center gap-2">
-            <span class="w-6 h-6 rounded-lg bg-cyan-500/20 text-cyan-300 font-bold text-xs flex items-center justify-center">1</span>
-            <h5 class="text-xs font-bold text-white">Scarlet / Esign</h5>
-          </div>
-          <p class="text-[11px] text-slate-400 leading-relaxed">
-            Descarga la IPA, abre <strong>Scarlet</strong> o <strong>Esign</strong>, importa el archivo e instala con tu certificado directamente en el iPhone.
+        <div class="p-4 rounded-xl bg-black/50 border border-zinc-900 space-y-1.5">
+          <span class="font-mono text-xs font-bold text-zinc-400">01 / ESIGN & SCARLET</span>
+          <h5 class="text-xs font-bold text-white">Instalación Directa</h5>
+          <p class="text-[11px] text-zinc-400 leading-relaxed">
+            Descarga el archivo IPA, impórtalo en <strong>Esign</strong> o <strong>Scarlet</strong> y fírmalo con tu certificado activo.
           </p>
         </div>
 
-        <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05] space-y-2">
-          <div class="flex items-center gap-2">
-            <span class="w-6 h-6 rounded-lg bg-purple-500/20 text-purple-300 font-bold text-xs flex items-center justify-center">2</span>
-            <h5 class="text-xs font-bold text-white">TrollStore</h5>
-          </div>
-          <p class="text-[11px] text-slate-400 leading-relaxed">
-            Si tienes <strong>TrollStore</strong> (iOS 14.0 - 17.0), toca el archivo descargado y selecciona "Install with TrollStore" para instalación permanente.
+        <div class="p-4 rounded-xl bg-black/50 border border-zinc-900 space-y-1.5">
+          <span class="font-mono text-xs font-bold text-zinc-400">02 / TROLLSTORE</span>
+          <h5 class="text-xs font-bold text-white">Sin Revocaciones</h5>
+          <p class="text-[11px] text-zinc-400 leading-relaxed">
+            Si dispones de <strong>TrollStore</strong> (iOS 14.0 – 17.0), abre el archivo descargado para instalación permanente.
           </p>
         </div>
 
-        <div class="p-4 rounded-xl bg-white/[0.02] border border-white/[0.05] space-y-2">
-          <div class="flex items-center gap-2">
-            <span class="w-6 h-6 rounded-lg bg-indigo-500/20 text-indigo-300 font-bold text-xs flex items-center justify-center">3</span>
-            <h5 class="text-xs font-bold text-white">Sideloadly / AltStore</h5>
-          </div>
-          <p class="text-[11px] text-slate-400 leading-relaxed">
-            Conecta tu iPhone por cable o WiFi a tu PC/Mac, arrastra la IPA a <strong>Sideloadly</strong> e instálala con tu Apple ID gratis.
+        <div class="p-4 rounded-xl bg-black/50 border border-zinc-900 space-y-1.5">
+          <span class="font-mono text-xs font-bold text-zinc-400">03 / SIDELOADLY</span>
+          <h5 class="text-xs font-bold text-white">Vía PC / Mac</h5>
+          <p class="text-[11px] text-zinc-400 leading-relaxed">
+            Conecta tu dispositivo vía USB/WiFi, arrastra el binario IPA a <strong>Sideloadly</strong> y fírmalo con tu Apple ID.
           </p>
         </div>
 
@@ -279,26 +267,27 @@
   </main>
 
   <!-- Footer -->
-  <footer class="relative z-10 w-full border-t border-white/[0.06] bg-[#07090e]/90 py-6 text-center">
+  <footer class="w-full border-t border-zinc-900 bg-black py-6 text-center text-xs text-zinc-500">
     <div class="max-w-4xl mx-auto px-4 space-y-2">
-      <p class="text-xs font-medium text-slate-400">
-        RageX iOS &bull; Versión <span class="text-cyan-300 font-mono">2.0.0-Beta</span> &bull; Build 10
-      </p>
-      <p class="text-[11px] text-slate-400">
-        Desarrollado y distribuido por <strong class="text-slate-300">RageX Team</strong>. Todos los derechos reservados.
+      <div class="flex items-center justify-center gap-4">
+        <a href="https://whatsapp.com/channel/0029Vb7NRaRAojYuOAfX5S0S" target="_blank" class="hover:text-zinc-300 transition">Canal WhatsApp</a>
+        <span>&bull;</span>
+        <a href="https://discord.gg/AksKwSWaKq" target="_blank" class="hover:text-zinc-300 transition">Discord</a>
+      </div>
+      <p class="text-[11px] text-zinc-600 pt-1">
+        &copy; 2026 Project X. Todos los derechos reservados.
       </p>
     </div>
   </footer>
 
   <!-- Toast Notification Container -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none p-3.5 rounded-xl bg-slate-900/95 border border-cyan-500/40 text-xs font-semibold text-white shadow-2xl backdrop-blur-md flex items-center gap-2">
-    <span>📋</span>
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none p-3.5 rounded-xl bg-zinc-900 border border-zinc-700 text-xs font-semibold text-white shadow-2xl flex items-center gap-2">
+    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
     <span id="toast-text">Enlace copiado al portapapeles</span>
   </div>
 
   <script>
     function copyDirectLink() {
-      // Direct raw link from GitHub repository
       const rawUrl = 'https://github.com/bnxyung7/X/raw/main/X-82949194-BETA.ipa';
       navigator.clipboard.writeText(rawUrl).then(() => {
         const btnLabel = document.getElementById('btn-copy-label');
