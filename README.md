@@ -2,7 +2,7 @@
 
 # ⚡ RageX iOS (Beta Oficial)
 
-[![Download IPA](https://img.shields.io/badge/📥_DESCARGAR_IPA-v2.0.0--Beta-00e5ff?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/bnxyung7/X/raw/main/X-82949194-BETA.ipa)
+[![Download IPA](https://img.shields.io/badge/📥_DESCARGAR_IPA-v3.1.6-00e5ff?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/bnxyung7/X/raw/main/X-v3.1.6.ipa)
 
 <br/>
 
@@ -25,8 +25,8 @@
 
 Puedes descargar el archivo `.ipa` oficial tocando el botón superior o a través de los siguientes enlaces directos:
 
-- **Descarga Directa (Raw GitHub)**: [Descargar X-82949194-BETA.ipa](https://github.com/bnxyung7/X/raw/main/X-82949194-BETA.ipa)
-- **Archivo en el repositorio**: [`X-82949194-BETA.ipa`](./X-82949194-BETA.ipa)
+- **Descarga Directa (Raw GitHub)**: [Descargar X-v3.1.6.ipa](https://github.com/bnxyung7/X/raw/main/X-v3.1.6.ipa)
+- **Archivo en el repositorio**: [`X-v3.1.6.ipa`](./X-v3.1.6.ipa)
 
 ---
 
@@ -45,7 +45,7 @@ Puedes descargar el archivo `.ipa` oficial tocando el botón superior o a travé
 ### 1. Scarlet / Esign (En el iPhone)
 1. Descarga el archivo `.ipa` en tu dispositivo iOS.
 2. Abre **Scarlet** o **Esign**.
-3. Importa el archivo `X-82949194-BETA.ipa` y fírmalo con tu certificado.
+3. Importa el archivo `X-v3.1.6.ipa` y fírmalo con tu certificado.
 
 ### 2. TrollStore (Instalación Permanente)
 - Compatible con iOS 14.0 hasta 17.0.
