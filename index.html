@@ -209,13 +209,13 @@
                 ★ RECOMENDADO
               </span>
             </div>
-            <span class="text-[10px] sm:text-[11px] font-mono text-zinc-400 whitespace-nowrap">5.3 MB &bull; v3.1.6</span>
+            <span class="text-[10px] sm:text-[11px] font-mono text-zinc-400 whitespace-nowrap">3.5 MB &bull; v3.1.7</span>
           </div>
           <p class="text-xs text-zinc-400 mb-3 leading-relaxed">
             Descarga el archivo <span class="text-zinc-200 font-mono font-medium">.IPA</span> para firmarlo e instalarlo con TrollStore, Scarlet, Sideloadly, Esign o AltStore.
           </p>
           <div class="flex flex-col sm:flex-row items-center gap-2.5">
-            <a id="btn-download" href="https://github.com/bnxyung7/X/raw/main/X-v3.1.6.ipa" download="X-v3.1.6.ipa" onclick="trackDownload()" class="btn-primary w-full sm:flex-1 py-3 px-5 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2">
+            <a id="btn-download" href="https://github.com/bnxyung7/X/raw/main/X-v3.1.7.ipa" download="X-v3.1.7.ipa" onclick="trackDownload()" class="btn-primary w-full sm:flex-1 py-3 px-5 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
               <span>Descargar IPA Oficial (5.3 MB)</span>
             </a>
@@ -257,7 +257,7 @@
       <!-- File Details -->
       <div class="p-3 rounded-xl bg-black/40 border border-zinc-900 flex items-center justify-between text-xs font-mono text-zinc-400">
         <span class="text-zinc-500 font-sans">Binario:</span>
-        <span class="text-zinc-300 truncate select-all">X-v3.1.6.ipa</span>
+        <span class="text-zinc-300 truncate select-all">X-v3.1.7.ipa</span>
         <span class="text-zinc-400 font-sans font-medium flex items-center gap-1.5">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
           Verificado
@@ -273,7 +273,7 @@
         </div>
         <div class="flex-1">
           <div class="flex items-center gap-2 mb-1">
-            <h3 class="text-base font-bold text-white">Novedades v3.1.6</h3>
+            <h3 class="text-base font-bold text-white">Novedades v3.1.7</h3>
             <span class="px-2 py-0.5 rounded-full text-[9px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">NUEVO</span>
           </div>
           <p class="text-xs text-zinc-400 mb-3">Solo estos productos van en esta IPA</p>
@@ -521,7 +521,7 @@
   <script>
     // Copy Direct Link
     function copyDirectLink() {
-      const rawUrl = 'https://github.com/bnxyung7/X/raw/main/X-v3.1.6.ipa';
+      const rawUrl = 'https://github.com/bnxyung7/X/raw/main/X-v3.1.7.ipa';
       navigator.clipboard.writeText(rawUrl).then(() => {
         const btnLabel = document.getElementById('btn-copy-label');
         if (btnLabel) btnLabel.textContent = '¡Copiado!';
@@ -617,7 +617,7 @@
       fetch(`${API_BASE}/api/analytics/download`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ file: 'X-v3.1.6.ipa' })
+        body: JSON.stringify({ file: 'X-v3.1.7.ipa' })
       })
       .then(res => res.json())
       .then(data => {
