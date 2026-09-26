@@ -34,9 +34,8 @@ Puedes descargar el archivo `.ipa` oficial tocando el botón superior o a travé
 
 | Canal | Descripción | Enlace Directo |
 |---|---|---|
-| 📢 **Canal de WhatsApp** | Anuncios, actualizaciones y noticias oficiales | [Unirse al Canal](https://whatsapp.com/channel/0029Vb7NRaRAojYuOAfX5S0S) |
-| 💬 **Soporte Oficial** | Activación de keys y atención personalizada | [+1 (809) 928-9722](https://wa.me/18099289722?text=Hola%20RageX%20Soporte) |
-| 🎮 **Discord Oficial** | Comunidad, soporte y tickets | [Unirse a Discord](https://discord.gg/AksKwSWaKq) |
+| 📢 **Discord Anuncio** | Anuncios, actualizaciones y noticias oficiales | [Abrir anuncio](https://discord.gg/wAAbwX8Dmc) |
+| 💬 **Discord Soporte** | Activación de keys y atención personalizada | [Abrir soporte](https://discord.gg/wpqqTnfXfc) |
 
 ---
 
