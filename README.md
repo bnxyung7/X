@@ -1,63 +1,10 @@
-<div align="center">
+# Project X
 
-# ⚡ RageX iOS (Beta Oficial)
+IPA oficial **4.3.2** (build 34).
 
-[![Download IPA](https://img.shields.io/badge/📥_DESCARGAR_IPA-v4.2.8-00e5ff?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/bnxyung7/X/raw/main/X-v4.2.8.Teste.ipa)
+[Descargar X-v4.3.2.Teste.ipa](https://github.com/bnxyung7/X/raw/main/X-v4.3.2.Teste.ipa)
 
-<br/>
+Sistemas compatibles: 17.0–17.7.2 · 18.0–18.7.10 · 26.0–26.7
 
-[![Version](https://img.shields.io/badge/Versión-2.0.0--Beta-cyan?style=flat-square)](https://github.com/bnxyung7/X)
-[![Build](https://img.shields.io/badge/Build-10-purple?style=flat-square)](https://github.com/bnxyung7/X)
-[![Size](https://img.shields.io/badge/Tamaño-8.9_MB-blue?style=flat-square)](https://github.com/bnxyung7/X/raw/main/X-82949194-BETA.ipa)
-[![Platform](https://img.shields.io/badge/iOS-15_hasta_27-emerald?style=flat-square)](https://github.com/bnxyung7/X)
-[![Status](https://img.shields.io/badge/Estado-Activo_%2F_En_Línea-brightgreen?style=flat-square)](https://github.com/bnxyung7/X)
-
-<p align="center">
-  <b>Portal Oficial de Distribución y Descarga Directa para iOS</b><br/>
-  Rápido, limpio, seguro y sin publicidad.
-</p>
-
----
-
-</div>
-
-## 📥 Enlace de Descarga Directa
-
-Puedes descargar el archivo `.ipa` oficial tocando el botón superior o a través de los siguientes enlaces directos:
-
-- **Descarga Directa (Raw GitHub)**: [Descargar X-v4.2.8.Teste.ipa](https://github.com/bnxyung7/X/raw/main/X-v4.2.8.Teste.ipa)
-- **Archivo en el repositorio**: [`X-v4.2.8.Teste.ipa`](./X-v4.2.8.Teste.ipa)
-
----
-
-## 📢 Canales Oficiales y Soporte
-
-| Canal | Descripción | Enlace Directo |
-|---|---|---|
-| 📢 **Discord Anuncio** | Anuncios, actualizaciones y noticias oficiales | [Abrir anuncio](https://discord.gg/wAAbwX8Dmc) |
-| 💬 **Discord Soporte** | Activación de keys y atención personalizada | [Abrir soporte](https://discord.gg/wpqqTnfXfc) |
-
----
-
-## 📲 Métodos de Instalación
-
-### 1. Scarlet / Esign (En el iPhone)
-1. Descarga el archivo `.ipa` en tu dispositivo iOS.
-2. Abre **Scarlet** o **Esign**.
-3. Importa el archivo `X-v4.2.8.Teste.ipa` y fírmalo con tu certificado.
-
-### 2. TrollStore (Instalación Permanente)
-- Compatible con iOS 14.0 hasta 17.0.
-- Abre la IPA con **TrollStore** para instalación directa y permanente sin revocaciones.
-
-### 3. Sideloadly / AltStore (Desde PC o Mac)
-1. Conecta tu iPhone por cable USB o red local a tu ordenador.
-2. Abre **Sideloadly**, arrastra la IPA e introduce tu Apple ID para firmarla gratis.
-
----
-
-## 📜 Créditos y Versión
-
-- **Versión**: `2.0.0-Beta` (Build `10`)
-- **Desarrollador / Distribuidor**: Justin / RageX Team
-- **Derechos**: © 2026 RageX. Todos los derechos reservados.
+- [Discord Anuncio](https://discord.gg/wAAbwX8Dmc)
+- [Discord Soporte](https://discord.gg/wpqqTnfXfc)
