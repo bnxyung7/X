@@ -1,0 +1,35 @@
+# The IPA lives on main. This publishes it on the Releases tab.
+name: Publish release
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Publish IPA release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          IPA=$(ls X-v*.Teste.ipa | head -1)
+          test -n "$IPA"
+          VER=$(printf '%s' "$IPA" | sed -n 's/^X-v\(.*\)\.Teste\.ipa$/\1/p')
+          test -n "$VER"
+          NOTES="IPA oficial ${VER}. Firma el archivo con ESign antes de instalarlo."
+          if gh release view "v${VER}" >/dev/null 2>&1; then
+            gh release upload "v${VER}" "$IPA" --clobber
+          else
+            gh release create "v${VER}" "$IPA" \
+              --title "X ${VER}" \
+              --notes "$NOTES" \
+              --latest
+          fi
