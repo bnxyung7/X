@@ -20,9 +20,9 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          IPA=$(ls X-v*.Teste.ipa | head -1)
+          IPA=$(ls -1 X-v*.ipa | head -1)
           test -n "$IPA"
-          VER=$(printf '%s' "$IPA" | sed -n 's/^X-v\(.*\)\.Teste\.ipa$/\1/p')
+          VER=$(printf '%s' "$IPA" | sed -n 's/^X-v\(.*\)\.ipa$/\1/p')
           test -n "$VER"
           NOTES="IPA oficial ${VER}. Firma el archivo con ESign antes de instalarlo."
           if gh release view "v${VER}" >/dev/null 2>&1; then
